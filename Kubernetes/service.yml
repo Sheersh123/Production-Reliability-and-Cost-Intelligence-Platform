@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cost-control-platform
+spec:
+  selector:
+    app: cost-control-platform
+  ports:
+  - port: 200
+    targetPort: 8000
+  type: LoadBalancer
