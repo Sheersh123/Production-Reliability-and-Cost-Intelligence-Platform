@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Cost-Control-Platform
+spec:
+  selector:
+    matchLabels:
+      app: Cost-Control-Platform
+  template:
+    metadata:
+      labels:
+        app: Cost-Control-platform
+    spec:
+      containers:
+      - name: Cost-Control-Platform
+        image: sheershsinha/metrics-microservice:v1
+        ports:
+        - containerPort: 8000
